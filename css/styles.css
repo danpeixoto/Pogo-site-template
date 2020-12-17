@@ -379,6 +379,9 @@ footer p {
 	.main-message {
 		transform: translateY(35%);
 	}
+	footer {
+		margin-top: 5vh;
+	}
 }
 
 
@@ -402,6 +405,9 @@ footer p {
 		background: url("../images/wave-medium.png") center no-repeat;
 		background-size: cover;
 		bottom: -.5rem;
+	}
+	footer {
+		margin-top: 2vh;
 	}
 }
 
@@ -533,6 +539,9 @@ footer p {
 		transform: translateX(50%);
 	}
 
+	footer {
+		margin-top: 1vh;
+	}
 	footer p{
 		font-size: 2em;
 	}
