@@ -1,0 +1,539 @@
+/* Estilos globais */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 'Nunito', sans-serif;
+	font-size: 10px;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+p {
+	font-size: 1.6rem;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+section {
+	padding: 5rem 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 98rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+.btn {
+	background-color: #030525;
+	border-radius: 2rem;
+	color: rgb(255, 255, 255);
+	display: inline-block;
+	margin-top: 3rem;
+	padding: 1rem 2.5rem;
+	text-transform: uppercase;
+	transition: background-color 650ms;
+	text-align: center;
+}
+
+.btn:hover {
+	background-color: #050d81;
+}
+
+/* header */
+
+header {
+	width: 100%;
+	height: 5rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+nav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+	border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.nav-brand {
+	width: 2rem;
+}
+
+.menu-icons i {
+	font-size: 3.5rem;
+	color: rgb(255, 255, 255);
+}
+
+.close i {
+	color: rgb(255, 255, 255);
+}
+
+.nav-list {
+	width: 25rem;
+	height: 100vh;
+	background-color: #030525;
+	position: fixed;
+	top: 0;
+	right: -30rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	transition: all 650ms ease-in-out;
+}
+
+.nav-list.active {
+	right: 0;
+}
+
+.close {
+	position: absolute;
+	top: 1rem;
+	left: 1.5rem;
+}
+
+.nav-link {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	color: rgb(255, 255, 255);
+}
+
+/* HERO */
+
+.hero {
+	width: 100%;
+	height: 80vh;
+	background: linear-gradient(135deg, rgba(102, 163, 255, 0.9) 0%, rgba(0, 0, 0, .9) 100%), url("../images/header-bg.png") center no-repeat fixed;
+	background-size: cover;
+	position: relative;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: -.1rem;
+	height: 4.8rem;
+	background: url("../images/wave-small.png") center no-repeat;
+	background-size: cover;
+}
+
+.main-message {
+	width: 100%;
+	max-width: 50rem;
+	color: rgb(255, 255, 255);
+	text-transform: uppercase;
+	transform: translateY(20%);
+}
+
+.main-message h3 {
+	font-size: 1.6rem;
+}
+
+.main-message h1 {
+	font-family: "Aldrich", sans-serif;
+	font-size: 4rem;
+	margin: 1rem 0;
+}
+
+.main-message p {
+	text-transform: lowercase;
+	width: 100%;
+}
+
+/* game */
+
+.title-heading {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
+
+.title-heading h3 {
+	font-size: 1.6rem;
+}
+
+.title-heading h1 {
+	font-size: 3rem;
+	font-family: "Aldrich", sans-serif;
+	text-align: center;
+}
+
+.title-heading p {
+	font-size: 1.4rem;
+	text-transform: lowercase;
+}
+
+.maps-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 2.5rem;
+}
+
+.maps-grid-item {
+	height: 55rem;
+	padding: 5rem;
+	color: rgb(255, 255, 255);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+	z-index: -1;
+}
+
+.maps-grid-item::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	background: linear-gradient(135deg, rgba(102, 163, 255, 0.9) 0%, rgba(0, 0, 0, .9) 100%);
+}
+
+.maps-grid-item img {
+	width: 50%;
+}
+
+.original {
+	background: url("../images/original.png") center no-repeat;
+	background-size: cover;
+}
+
+.monolith {
+	background: url("../images/monolith.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.tethered {
+	background: url("../images/friends.jpg") center no-repeat;
+	background-size: cover;
+}
+
+.loot {
+	background: url("../images/loot.png") center no-repeat;
+	background-size: cover;
+}
+
+.skate {
+	background: url("../images/skate.png") center no-repeat;
+	background-size: cover;
+}
+
+.maps-grid-item i {
+	font-size: 4rem;
+	color: #272EA8;
+}
+
+.maps-grid-item h1 {
+	font-family: "Aldrich", sans-serif;
+	font-size: 2rem;
+	text-transform: uppercase;
+	margin: 2rem 0;
+}
+
+.maps-grid-item p {
+	font-size: 1.6rem;
+}
+
+/* Experiences */
+
+.experiences {
+	width: 100%;
+	height: 120vh;
+	position: relative;
+	background: linear-gradient(135deg, rgba(102, 163, 255, 0.9) 0%, rgba(0, 0, 0, .9) 100%);
+}
+
+.experiences::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	top: -.1rem;
+	left: 0;
+	height: 4.8rem;
+	background: url("../images/wave-small-reversed.png") center no-repeat;
+	background-size: cover;
+}
+
+.experiences::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	bottom: -.1rem;
+	left: 0;
+	height: 4.8rem;
+	background: url("../images/wave-small.png") center no-repeat;
+	background-size: cover;
+}
+
+.experience {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 2.5rem;
+	margin: 5rem 0;
+	text-align: center;
+}
+
+.experience .player {
+	width: 100%;
+}
+
+.experience .player img {
+	width: 20rem;
+	height: 20rem;
+	border-radius: 100%;
+	border: 3px solid #ffffff;
+}
+
+.experience .player h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	font-family: 'Aldrich', sans-serif;
+	color: #ffffff;
+}
+
+
+.experience .player-quote {
+	width: 100%;
+	text-align: center;
+	margin: auto;
+}
+
+.experience .player-quote p {
+	font-size: 2.0rem;
+	font-family: 'Aldrich', sans-serif;
+	color: #ffffff;
+}
+
+/* purchase */
+
+.purchase {
+	width: 100%;
+	position: relative;
+	height: 90vh;
+}
+
+.text-persuasion {
+	color: rgba(0, 0, 0, 1);
+	width: 50%;
+	margin: auto;
+}
+
+.text-persuasion p {
+	font-size: 2rem;
+}
+
+.purchase .cta {
+	width: 100%;
+}
+
+
+.purchase .cta .btn {
+	width: 100%;
+	height: 100%;
+	font-size: 2rem;
+}
+
+/* footer */
+
+footer {
+	padding: 2.5rem 0;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+footer p {
+	text-align: center;
+}
+
+/* media- queries */
+@media screen and (min-width:350px) {
+	.main-message {
+		transform: translateY(35%);
+	}
+}
+
+
+@media screen and (min-width:470px) {
+	.hero::before {
+		height: 9.4rem;
+		background: url("../images/wave-medium.png") center no-repeat;
+		background-size: cover;
+		bottom: -.5rem;
+	}
+
+	.experiences::before {
+		height: 9.4rem;
+		background: url("../images/wave-medium-reversed.png") center no-repeat;
+		background-size: cover;
+		top: -.5rem;
+	}
+
+	.experiences::after {
+		height: 9.4rem;
+		background: url("../images/wave-medium.png") center no-repeat;
+		background-size: cover;
+		bottom: -.5rem;
+	}
+}
+
+
+@media screen and (min-width:700px) {
+	header {
+		height: 8rem;
+	}
+
+	.nav-brand {
+		width: 3.5rem;
+	}
+
+	.nav-list {
+		width: initial;
+		height: initial;
+		background-color: transparent;
+		position: initial;
+		top: initial;
+		right: initial;
+		flex-direction: row;
+		transition: initial;
+	}
+
+	.menu-icons {
+		display: none;
+	}
+
+	.nav-item {
+		margin: 0 2.5rem;
+	}
+
+	.nav-link,
+	.current {
+		color: #ffffff;
+		position: relative;
+		font-size: 1.3rem;
+	}
+
+	.nav-link::before,
+	.current::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -.5rem;
+		background-color: #030525;
+		height: 2px;
+		width: 100%;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 650ms;
+	}
+
+	.current::before {
+		transform: scaleX(1);
+	}
+
+	.nav-link:hover::before {
+		transform: scaleX(1);
+	}
+
+	.hero {
+		height: 90vh;
+	}
+
+	.main-message {
+		transform: translateY(80%);
+	}
+
+	.main-message p {
+		font-size: 1.8rem;
+	}
+
+	.hero::before {
+		height: 22.7rem;
+		background: url("../images/wave-large.png") center no-repeat;
+		background-size: cover;
+		bottom: -.5rem;
+	}
+
+	.title-heading h1 {
+		font-size: 4rem;
+	}
+
+	.title-heading h3 {
+		font-size: 2rem;
+	}
+
+	.title-heading p {
+		font-size: 1.8rem;
+	}
+
+
+	.experiences {
+		height: 100vh;
+	}
+
+	.experiences::before {
+		height: 22.7rem;
+		background: url("../images/wave-large-reversed.png") center no-repeat;
+		background-size: cover;
+		top: -.5rem;
+	}
+
+	.experiences::after {
+		background: none;
+	}
+
+	.experience{
+		height: 100%;
+		margin-top: 18vh;
+	}
+	.experience .player img{
+		height: 25vh;
+		width: 25vh;
+	}
+	.experience .player-quote p{
+		font-size: 3rem;
+	}
+
+	.purchase{
+		height: 40vh;
+	}
+
+	.purchase .cta .btn {
+		width: 50%;
+		height: 50%;
+		font-size: 2rem;
+		transform: translateX(50%);
+	}
+
+	footer p{
+		font-size: 2em;
+	}
+}
